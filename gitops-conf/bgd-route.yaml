@@ -1,8 +1,8 @@
 apiVersion: route.openshift.io/v1		
-kind: Route
-		
+kind: Route		
 metadata:
   name: bgd-route
+  namespace: bgd
   labels:		
     app: bgd		
     app.kubernetes.io/instance: bgd-app
@@ -15,3 +15,4 @@ spec:
     name: bgd		
     weight: 100		
   wildcardPolicy: None
+  tls: null
